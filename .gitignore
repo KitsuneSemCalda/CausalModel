@@ -7,3 +7,6 @@ build/
 
 # Ignore compile_commands
 compile_commands.json
+
+#Ignore cache 
+.cache
