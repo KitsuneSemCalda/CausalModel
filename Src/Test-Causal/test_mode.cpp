@@ -1,7 +1,3 @@
-#include <CausalModel/EpisthemologicFunction.hpp>
-#include <CausalModel/KnowledgeFunction.hpp>
-#include <CausalModel/RelationFunction.hpp>
-#include <cassert>
 #include <iostream>
 #include <test_mode.hpp>
 
@@ -87,10 +83,13 @@ void test_relation_type_pointer() {
 }
 
 void test_to_string() {
+  std::cout << "[Test Function with pointer arguments]\n";
   test_knowledge_form_pointer();
   test_epistemic_class_pointer();
   test_epistemic_type_pointer();
   test_relation_type_pointer();
+  std::cout << "\n";
+  std::cout << "[Test Function with value arguments]\n";
   test_epistemic_type_value();
   test_knowledge_form_value();
   test_epistemic_class_value();

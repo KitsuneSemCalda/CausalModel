@@ -1,4 +1,4 @@
-#include <EpisthemologicFunction.hpp>
+#include <EpisthemicFunction.hpp>
 #include <Episthemology.hpp>
 
 const char *to_string(EpistemicClass c) {
