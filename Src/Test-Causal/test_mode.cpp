@@ -1,7 +1,6 @@
-#include "Episthemology.hpp"
-#include "KnowledgeForm.hpp"
 #include <CausalModel/EpisthemologicFunction.hpp>
 #include <CausalModel/KnowledgeFunction.hpp>
+#include <CausalModel/RelationFunction.hpp>
 #include <cassert>
 #include <iostream>
 #include <test_mode.hpp>
@@ -70,13 +69,32 @@ void test_epistemic_class_pointer() {
   assert(std::string(to_string(c3)) == "undefined");
 }
 
+void test_relation_type_value() {
+  std::cout << "[RelationType::value]\n";
+  assert(std::string(to_string(RelationType::Causal)) == "causal");
+  assert(std::string(to_string(RelationType::Correlational)) ==
+         "correlational");
+  assert(std::string(to_string(RelationType::Undefined)) == "undefined");
+}
+
+void test_relation_type_pointer() {
+  std::cout << "[RelationType::pointer]\n";
+  RelationType r1 = RelationType::Causal;
+  RelationType *null_ptr = nullptr;
+
+  assert(std::string(to_string(&r1)) == "causal");
+  assert(std::string(to_string(null_ptr)) == "undefined");
+}
+
 void test_to_string() {
   test_knowledge_form_pointer();
   test_epistemic_class_pointer();
   test_epistemic_type_pointer();
+  test_relation_type_pointer();
   test_epistemic_type_value();
   test_knowledge_form_value();
   test_epistemic_class_value();
+  test_relation_type_value();
 
   std::cout << "\nAll to_string tests passed.\n";
 }
