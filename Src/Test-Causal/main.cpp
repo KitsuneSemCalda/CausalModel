@@ -1,6 +1,9 @@
 #include <iostream>
+#include <test_mode.hpp>
 
 int main() {
-  std::cout << "hello world!" << std::endl;
+#ifdef TEST_MODE
+  run_test();
+#endif
   return 0;
 }
