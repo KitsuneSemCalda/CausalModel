@@ -1,8 +1,8 @@
 #pragma once
 
-#include <CausalModel/EpisthemicFunction.hpp>
-#include <CausalModel/KnowledgeFunction.hpp>
-#include <CausalModel/RelationFunction.hpp>
+#include <CausalModel/Funcs/EpisthemicFunction.hpp>
+#include <CausalModel/Funcs/KnowledgeFunction.hpp>
+#include <CausalModel/Funcs/RelationFunction.hpp>
 #include <cassert>
 
 void run_test();
